@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="static/JS/p5.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiro al bersaglio | Luigi Lattanzio</title>
+</head>
+
+<body>
+    <script>
+        let diametro = 400;
+
+        function setup() {
+            createCanvas(600, 600);
+            background(220);
+            drawTarget();
+        }
+
+        function drawTarget() {
+            for (let i = 0; i < 5; i++) {
+                fill(i % 2 === 0 ? 'red' : 'white');
+                stroke(0);
+                strokeWeight(2);
+                circle(width / 2, height / 2, diametro - i * 80);
+            }
+        }
+
+        function draw() { }
+
+        function mouseClicked() {
+            let d = dist(mouseX, mouseY, width / 2, height / 2);
+            let r = diametro / 2;
+
+            if (d <= r) {
+                console.log("Colpito!");
+            } else {
+                console.log("Fuori bersaglio!");
+            }
+        }
+
+    </script>
+</body>
+
+</html>
