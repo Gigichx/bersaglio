@@ -1,0 +1,16 @@
+button {
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #ff4b2b, #ff416c);
+}

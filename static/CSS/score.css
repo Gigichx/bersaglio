@@ -1,0 +1,25 @@
+#score {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.score-float {
+    position: absolute;
+    color: #28a745;
+    font-size: 20px;
+    font-weight: bold;
+    animation: floatUp 1s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+}

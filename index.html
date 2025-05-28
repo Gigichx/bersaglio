@@ -3,6 +3,9 @@
 
 <head>
     <script src="static/JS/p5.min.js"></script>
+    <script src="static/JS/script.js"></script>
+
+    <link rel="stylesheet" href="static/CSS/style.css">
     <link rel="icon" href="static/CSS/IMG/image-removebg-preview.png" type="image/arrow-icon">
 
     <meta charset="UTF-8">
@@ -11,38 +14,13 @@
 </head>
 
 <body>
-    <script>
-        let diametro = 400;
-
-        function setup() {
-            createCanvas(600, 600);
-            background(220);
-            drawTarget();
-        }
-
-        function drawTarget() {
-            for (let i = 0; i < 5; i++) {
-                fill(i % 2 === 0 ? 'red' : 'white');
-                stroke(0);
-                strokeWeight(2);
-                circle(width / 2, height / 2, diametro - i * 80);
-            }
-        }
-
-        function draw() { }
-
-        function mouseClicked() {
-            let d = dist(mouseX, mouseY, width / 2, height / 2);
-            let r = diametro / 2;
-
-            if (d <= r) {
-                console.log("Colpito!");
-            } else {
-                console.log("Fuori bersaglio!");
-            }
-        }
-
-    </script>
+    <h1>Tiro al Bersaglio</h1>
+    <div>
+        <button onclick="startGame()">Gioca</button>
+        <button onclick="restartGame()">Rigioca</button>
+        <div id="score">Punteggio: 0</div>
+    </div>
+    <div id="p5-container"></div>
 </body>
 
 </html>
